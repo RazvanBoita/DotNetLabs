@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/y4MBiWcnWk=",
+  "success": true,
+  "projectFilePath": "/home/user-razvan/an3/dotnet/GoodBookManagement/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/user-razvan/.nuget/packages/microsoft.netcore.app.ref/8.0.8/microsoft.netcore.app.ref.8.0.8.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

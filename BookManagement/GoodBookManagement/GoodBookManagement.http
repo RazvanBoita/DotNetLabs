@@ -1,0 +1,6 @@
+@GoodBookManagement_HostAddress = http://localhost:5187
+
+GET {{GoodBookManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
