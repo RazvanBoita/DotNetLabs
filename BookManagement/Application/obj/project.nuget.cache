@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "LXT6RLW7fCM=",
+  "success": true,
+  "projectFilePath": "/home/user-razvan/an3/dotnet/labs/BookManagement/Application/Application.csproj",
+  "expectedPackageFiles": [
+    "/home/user-razvan/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/fluentvalidation/11.10.0/fluentvalidation.11.10.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.10.0/fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/gridify/2.15.0/gridify.2.15.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.aspnetcore.metadata/9.0.0-rc.2.24474.3/microsoft.aspnetcore.metadata.9.0.0-rc.2.24474.3.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.netcore.app.ref/8.0.8/microsoft.netcore.app.ref.8.0.8.nupkg.sha512",
+    "/home/user-razvan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

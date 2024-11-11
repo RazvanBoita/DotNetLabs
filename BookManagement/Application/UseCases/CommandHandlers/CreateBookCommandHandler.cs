@@ -1,10 +1,12 @@
 using Application.UseCases.Commands;
 using Domain.Repository;
+using Domain.Utils;
+using FluentValidation;
 using MediatR;
 
 namespace Application.UseCases.CommandHandlers;
 
-public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, Guid>
+public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, Result<Guid>>
 {
     private readonly IBookRepository _bookRepository;
 
@@ -12,7 +14,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, Guid>
     {
         _bookRepository = bookRepository;
     }
-    public async Task<Guid> Handle(CreateBookCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Guid>> Handle(CreateBookCommand request, CancellationToken cancellationToken)
     {
         var book = new Domain.Entities.Book
         {
@@ -21,6 +23,13 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, Guid>
             ISBN = request.ISBN,
             PublicationDate = request.PublicationDate
         };
-        return await _bookRepository.AddAsync(book);
+        //validation data poate
+        var result = await _bookRepository.AddAsync(book);
+        if (result.IsSuccess)
+        {
+            return Result<Guid>.Success(result.Data);
+        }
+
+        return Result<Guid>.Failure(result.ErrorMessage);
     }
 }

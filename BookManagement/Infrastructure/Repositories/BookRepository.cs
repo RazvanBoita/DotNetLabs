@@ -2,6 +2,7 @@ using Application.DTOs;
 using AutoMapper;
 using Domain.Entities;
 using Domain.Repository;
+using Domain.Utils;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,23 +25,32 @@ public class BookRepository : IBookRepository
         return await _applicationDbContext.Books.FindAsync(guid); 
     }
 
-    public async Task<Guid> AddAsync(Book book)
+    public async Task<Result<Guid>> AddAsync(Book book)
     {
-        await _applicationDbContext.AddAsync(book);
-        await _applicationDbContext.SaveChangesAsync();
-        return book.Id;
+        try
+        {
+            await _applicationDbContext.AddAsync(book);
+            await _applicationDbContext.SaveChangesAsync();
+            return Result<Guid>.Success(book.Id);
+        }
+        catch (Exception e)
+        {
+            return Result<Guid>.Failure(e.Message);
+        }
     }
 
-    public async Task<Book> UpdateAsync(Book book)
+    public async Task<Result<Book>> UpdateAsync(Book book)
     {
-        var foundBook = await GetByIdAsync(book.Id);
-        if (foundBook is not null)
+        try
         {
-            _applicationDbContext.Entry(foundBook).CurrentValues.SetValues(book);
+            _applicationDbContext.Entry(book).State = EntityState.Modified;
             await _applicationDbContext.SaveChangesAsync();
+            return Result<Book>.Success(book);
         }
-
-        return foundBook;
+        catch (Exception e)
+        {
+            return Result<Book>.Failure("Book update failed");
+        }        
     }
 
     public async Task<Book> DeleteAsync(Guid id)

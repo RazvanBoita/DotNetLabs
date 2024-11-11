@@ -1,0 +1,6 @@
+{
+  "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/home\/user-razvan\/an3\/dotnet\/labs\/BookManagement\/Application",
+  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/home\/user-razvan\/an3\/dotnet\/labs\/BookManagement\/Domain",
+  "GoodBookManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/home\/user-razvan\/an3\/dotnet\/labs\/BookManagement\/GoodBookManagement",
+  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/home\/user-razvan\/an3\/dotnet\/labs\/BookManagement\/Infrastructure"
+}

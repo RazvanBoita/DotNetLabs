@@ -24,4 +24,6 @@ app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
 
+public partial class Program{}
+
 //TODO olariu@gmail.com   -- [.NET][NumePrenume][Lab3].zip (mai degraba repo)

@@ -1,0 +1,22 @@
+<div class="book-list">
+    <h1>Book List</h1>
+    <button (click)="navigateToCreate()">Create New Book</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th>Publication Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.isbn }}</td>
+          <td>{{ book.publicationDate}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
